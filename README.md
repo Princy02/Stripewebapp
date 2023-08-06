@@ -26,4 +26,3 @@ A simple Subscription Billing App developed as part of an interview process. Use
 - MySQL
 - Stripe API
 
-## 📝 Getting Started
