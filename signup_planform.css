@@ -1,0 +1,475 @@
+/* Color ------------------------------------------- */
+
+:root {
+  --color-invalid: #e50914;
+  --color-invalid-hover: #f11722;
+  --color-invalid-shadow: #e509146b;
+  --color-tab: #e5091489;
+  --color-forgot: #0071eb;
+  --color-absolute: rgb(62, 62, 62);
+  --color-flag: rgb(232, 225, 225);
+  --color-footer-bg: #f3f3f3;
+}
+
+/* Box Sizing -------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Text, Tag Style --------------------------------- */
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+h2 {
+  font-size: 0.84rem;
+  font-weight: 300;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+p,
+span {
+  font-weight: 300;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: white;
+}
+
+/* Text Style -------------------------------------- */
+
+.text-check {
+  font-size: 1.6rem;
+  color: navy;
+}
+.text-table-head {
+  font-weight: 500;
+  color: white;
+}
+.text-content {
+  line-height: 3.6;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.text-content-1 {
+  text-align: start;
+  width: 14rem;
+  line-height: 3.2;
+  color: black;
+}
+.text-icon {
+  font-size: 1.6rem;
+  margin-top: 0.6rem;
+}
+.text-icon-1 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+.text-terms {
+  font-size: 0.8rem;
+  color: grey;
+  max-width: 49rem;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+.text-terms-1 {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--color-forgot);
+  max-width: 49rem;
+}
+.text-absolute {
+  display: none;
+  font-size: 0.76rem;
+  text-align: center;
+  color: var(--color-absolute);
+  line-height: 2;
+}
+.text-underline {
+  cursor: pointer;
+}
+.text-underline:hover {
+  text-decoration: underline;
+}
+
+/* Spacing ----------------------------------------- */
+
+.margin-top {
+  margin-top: 1rem;
+}
+.margin-top-1 {
+  margin-top: 1.4rem;
+}
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+.margin-bottom-1 {
+  margin-bottom: 1.4rem;
+}
+.margin-block {
+  margin-block: 1rem;
+}
+.margin-inline {
+  margin-inline: auto;
+}
+
+/* Button ----------------------------------------- */
+
+button,
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 1.1em;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  height: 3.2rem;
+  max-width: 100%;
+}
+.btn-plan {
+  font-size: 1.6em;
+  height: 4rem;
+  background: navy;
+  width: 30rem;
+}
+.btn-logout {
+  font-weight: 600;
+  color: black;
+}
+.btn-plan:hover {
+  background-color: var(--color-invalid-hover);
+}
+
+/* Logo ------------------------------------------ */
+
+.logo {
+  margin-top: 0.4rem;
+  width: 8rem;
+}
+
+/* Nav ------------------------------------------- */
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.4rem 3.2rem;
+  z-index: 2;
+}
+.nav-3 {
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-flag);
+}
+
+/* Container ------------------------------------- */
+
+.container-table {
+  max-width: 64rem;
+  animation: form ease-in-out 0.6s;
+  padding: 4rem;
+}
+
+/* Plan Feature ---------------------------------- */
+
+.plan-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+.choose-plan {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Table ----------------------------------------- */
+
+.table-res {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.line {
+  position: relative;
+  top: -25rem;
+  opacity: 0.4;
+  display: grid;
+  gap: 3rem;
+}
+
+.tab-hidden .tab-label,
+.tab-hidden .label {
+  background: transparent;
+  color: transparent;
+  pointer-events: none;
+}
+.tab-input,
+.tab-input-none {
+  display: none;
+}
+
+.label {
+  width: 8rem;
+  height: 7rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.tab-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: navy;
+  width: 100%;
+  height: 100%;
+}
+
+.tab-input:checked + .label {
+  background: navy;
+  box-shadow: 0 0 0.5rem var(--color-invalid-shadow);
+}
+.tab-input:checked + .label + .content-list {
+  color: navy;
+}
+
+.content-list {
+  margin-top: 1rem;
+  text-align: center;
+  color: gray;
+}
+.device-list {
+  display: grid;
+}
+
+/* Terms ----------------------------------------- */
+
+.terms {
+  margin-top: -4.6rem;
+  margin-bottom: 2.4rem;
+}
+
+/* Footer ----------------------------------------- */
+
+.footer {
+  padding: 3rem;
+}
+.footer-container {
+  display: grid;
+  max-width: 50rem;
+  gap: 1.6rem;
+  color: gray;
+}
+.footer-gray {
+  background-color: var(--color-footer-bg);
+  border-top: 1px solid var(--color-flag);
+}
+.links {
+  display: flex;
+  line-height: 1.7;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Language Option ------------------------------ */
+
+.language {
+  position: relative;
+}
+.language-select {
+  appearance: none;
+  cursor: pointer;
+  height: 2.4rem;
+  max-width: 12rem;
+  border-radius: 0.2rem;
+  padding-inline: 2.4rem;
+  outline: none;
+  color: gray;
+  background-color: transparent;
+}
+.language-icon {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.globe {
+  position: absolute;
+  left: 1rem;
+}
+.chevron {
+  position: absolute;
+  left: 10rem;
+}
+
+/* Animation --------------------------------------- */
+
+@keyframes form {
+  from {
+    transform: translateX(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Media Query ------------------------------------- */
+
+/* Nav Media Query */
+
+@media (320px <= width <= 640px) {
+  .nav {
+    padding-inline: 2rem;
+  }
+  .logo {
+    width: 6rem;
+  }
+}
+@media (320px <= width <= 450px) {
+  .nav {
+    padding-inline: 1rem;
+  }
+}
+
+/* Planform Table Media Query */
+
+@media (700px <= width <= 880px) {
+  .container-table {
+    padding: 2rem;
+  }
+  .label {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media (320px <= width <= 700px) {
+  .container-table {
+    padding: 2rem 1.6rem;
+  }
+  h1 {
+    max-width: 26rem;
+  }
+  .text-content {
+    line-height: 5;
+  }
+  .text-absolute {
+    display: grid;
+    gap: 2.42rem;
+    position: absolute;
+    top: 5.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .text-icon {
+    margin-top: 1.6rem;
+  }
+  .text-content {
+    font-size: 0.76rem;
+  }
+  .hide {
+    display: none;
+  }
+  .label {
+    height: 5rem;
+  }
+  .content-list {
+    margin-top: 1.4rem;
+  }
+  .line {
+    top: -31rem;
+    gap: 3.64rem;
+  }
+  .terms {
+    margin-top: -6.4rem;
+  }
+}
+@media (320px <= width <= 580px) {
+  .text-table-head {
+    font-size: 0.8rem;
+  }
+  .label {
+    width: 6rem;
+    height: 4.6rem;
+    transition: all ease-in-out 0.3s;
+  }
+  .text-absolute {
+    top: 5.4rem;
+  }
+}
+@media (320px <= width <= 450px) {
+  .text-table-head {
+    font-size: 0.8rem;
+  }
+  .text-absolute {
+    top: 4.6rem;
+  }
+  .container-table {
+    padding: 2rem 1rem;
+  }
+  .label {
+    width: 4.8rem;
+    height: 4rem;
+    transition: all ease-in-out 0.3s;
+  }
+}
+@media (250px <= width <= 320px) {
+  .label {
+    width: 4.2rem;
+    height: 3.6rem;
+    transition: all ease-in-out 0.3s;
+  }
+}
+
+/* Footer Media Query */
+
+@media (320px <= width <= 640px) {
+  .footer {
+    padding-inline: 2rem;
+  }
+  .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (320px <= width <= 450px) {
+  .footer {
+    padding-inline: 1rem;
+  }
+  .links {
+    display: block;
+    line-height: 2;
+  }
+}
+
+@media (min-width: 2048px) {
+  nav,
+  section,
+  footer {
+    zoom: 2;
+  }
+}

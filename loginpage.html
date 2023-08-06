@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form validation || Learningrobo</title>
+    <style>
+      /* Reset default margin and padding */
+      body,
+      h1,
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: navy;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .wrapper {
+        text-align: center;
+      }
+
+      header {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .field {
+        margin-bottom: 20px;
+      }
+
+      .input-area {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .input-area input {
+        border: none;
+        padding: 10px;
+        width: 100%;
+      }
+
+      .icon {
+        margin-right: 10px;
+      }
+
+      .error {
+        display: none;
+        color: red;
+        margin-top: 5px;
+      }
+
+      .error-icon {
+        position: absolute;
+        right: 10px;
+        color: red;
+        display: none;
+      }
+
+      .pass-txt {
+        margin-top: 10px;
+        text-align: right;
+      }
+
+      .pass-txt a {
+        color: #e50914;
+        text-decoration: none;
+      }
+
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #e50914;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #b20710;
+      }
+    </style>
+    <form action="register.php" method="post">
+      <label for="email">Email:</label>
+      <input type="email" name="email" required /><br /><br />
+
+      <label for="password">Password:</label>
+      <input type="password" name="password" required /><br /><br />
+
+      <input type="submit" value="Register" />
+    </form>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <header>Login Form</header>
+        <form id="login-form" action="#">
+          <div class="field email">
+            <div class="input-area">
+              <input type="text" placeholder="Email Address" name="email" />
+              <i class="icon fas fa-envelope"></i>
+            </div>
+            <div class="error error-txt">Email can't be blank</div>
+          </div>
+          <div class="field password">
+            <div class="input-area">
+              <input type="password" placeholder="Password" name="password" />
+              <i class="icon fas fa-lock"></i>
+            </div>
+            <div class="error error-txt">Password can't be blank</div>
+          </div>
+
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginForm = document.getElementById("login-form");
+
+        loginForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // You can add your authentication logic here
+          // For demonstration purposes, let's assume successful login
+          const email = loginForm.elements.email.value;
+          const password = loginForm.elements.password.value;
+
+          // Check credentials and redirect to subscription billing page
+          if (email === "example@example.com" && password === "password") {
+            window.location.href = "subscription-billing.html";
+          } else {
+            window.location.href = "subscription-billing.html";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
