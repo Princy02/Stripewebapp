@@ -1,9 +1,6 @@
 <!-- Add Your Project Banner/Image -->
 ![image](https://github.com/Princy02/Stripewebapp/assets/97166269/fb4a8ad4-01d8-407a-9eba-9dc7403caa00)
 
-<p align="center">
-  <img src="project_banner.png" alt="Subscription Billing App" width="600">
-</p>
 
 # Subscription Billing App 🚀
 
